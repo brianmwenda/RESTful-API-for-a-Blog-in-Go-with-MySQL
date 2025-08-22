@@ -1,0 +1,40 @@
+{{define "posts.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>All Blog Posts</h1>
+        <a class="btn" href="/newpost">+ New Post</a>
+        <div class="users-list">
+            {{range $user := .}}
+            <div class="user-card">
+                <h2>{{$user.Username}}</h2>
+                {{if $user.Posts}}
+                <ul class="post-tree">
+                    {{range $post := $user.Posts}}
+                    <li>
+                        <div class="post-item">
+                            <h3>{{$post.Title}}</h3>
+                            <p>{{$post.Content}}</p>
+                        </div>
+                    </li>
+                    {{end}}
+                </ul>
+                {{else}}
+                <p class="no-posts">No posts yet.</p>
+                {{end}}
+            </div>
+            {{else}}
+            <p>No users available.</p>
+            {{end}}
+        </div>
+        <a class="btn back" href="/users">← Back to Users</a>
+    </div>
+</body>
+</html>
+{{end}}

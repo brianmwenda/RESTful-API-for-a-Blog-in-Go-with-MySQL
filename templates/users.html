@@ -1,0 +1,34 @@
+{{define "users.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Users</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>All Users</h1>
+
+    <form action="/users" method="POST" class="form-card">
+      <input type="text" name="username" placeholder="Enter username" required>
+      <input type="email" name="email" placeholder="Enter email" required>
+      <button type="submit" class="btn">Add User</button>
+    </form>
+
+    <div class="users-list">
+      {{range .}}
+      <div class="user-card">
+        <h2>{{.Username}}</h2>
+        <p>{{.Email}}</p>
+      </div>
+      {{else}}
+      <p>No users found.</p>
+      {{end}}
+    </div>
+
+    <a class="btn back" href="/">← Back</a>
+  </div>
+</body>
+</html>
+{{end}}
