@@ -24,7 +24,11 @@ func main() {
 
 	tmpl = template.Must(template.ParseGlob("templates/*.html"))
 
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	http.HandleFunc("/templates/static/style.css", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/css")
+		http.ServeFile(w, r, "static/style.css")
+	})
+
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/users", usersHandler)
 	http.HandleFunc("/posts", postsHandler)     // show all posts grouped by user

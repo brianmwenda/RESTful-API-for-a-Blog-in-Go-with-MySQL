@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 22, 2025 at 04:11 PM
+-- Generation Time: Aug 22, 2025 at 04:30 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,10 +41,9 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `user_id`, `title`, `content`, `created_at`, `updated_at`) VALUES
-(1, 1, 'My First Blog', 'This is the content of my first blog post.', '2025-08-22 12:44:27', '2025-08-22 12:44:27'),
-(4, 1, 'home', 'contente', '2025-08-22 13:53:55', '2025-08-22 13:53:55'),
-(5, 1, 'How to create api', 'backend configs', '2025-08-22 13:58:48', '2025-08-22 13:58:48'),
-(6, 3, 'How to be a good go developer', 'Just Learn!', '2025-08-22 14:10:50', '2025-08-22 14:10:50');
+(7, 1, 'The Future of Web Development: Trends to Watch in 2024', 'Web development is evolving at an unprecedented pace, and 2024 promises to bring exciting new trends that will reshape how we build and interact with websites. In this comprehensive guide, we\'ll explore the most significant trends that every developer and business owner should be aware of.', '2025-08-22 14:28:57', '2025-08-22 14:28:57'),
+(8, 3, 'UI/UX Design Principles That Convert Visitors to Customers', 'Great design is more than just aesthetics—it\'s about creating experiences that guide users toward taking action. In this article, we\'ll explore the fundamental UI/UX principles that can significantly improve your conversion rates.\r\n\r\n1. Clear Value Proposition\r\nYour visitors should understand what you offer within seconds of landing on your page. A clear, compelling value proposition placed prominently on your homepage is crucial for keeping visitors engaged.\r\n\r\n2. Intuitive Navigation\r\nUsers should never feel lost on your website. Implement clear, logical navigation structures with descriptive labels. Breadcrumbs, search functionality, and a well-organized menu system all contribute to better user experience.\r\n\r\n3. Responsive Design\r\nWith mobile traffic accounting for over 50% of web browsing, responsive design isn\'t optional—it\'s essential. Your website must provide an excellent experience across all devices and screen sizes.', '2025-08-22 14:29:40', '2025-08-22 14:29:40'),
+(9, 1, 'Building Responsive Websites: A Complete Guide', 'With users accessing websites from a wide range of devices—smartphones, tablets, laptops, and desktops—responsive web design is no longer optional; it\'s a necessity. A responsive website ensures your content looks great and functions well on every screen size. This complete guide will walk you through the fundamentals, tools, and best practices for building fully responsive websites.', '2025-08-22 14:30:21', '2025-08-22 14:30:21');
 
 -- --------------------------------------------------------
 
@@ -95,7 +94,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
