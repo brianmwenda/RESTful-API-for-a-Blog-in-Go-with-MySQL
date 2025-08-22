@@ -1,0 +1,6 @@
+{{ define "content" }}
+<h2>{{.Title}}</h2>
+<p>{{.Content}}</p>
+<a href="/" class="btn btn-primary">⬅ Back</a>
+<a href="/delete?id={{.ID}}" class="btn btn-danger">🗑️ Delete</a>
+{{ end }}
